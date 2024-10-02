@@ -26,15 +26,13 @@ var merge = function(nums1, nums2) {
     let array = [...nums1, ...nums2] 
     array.sort((a,b)=>a-b)
     let median
-    let mid 
     let length = array.length
+    let mid = Math.floor(length/2)
 
     if( length % 2 != 0 )
     {
-        mid = Math.floor(length/2)
         median = array[mid]
     }else{
-        mid = Math.floor(length/2);
         median = (array[mid-1] + array[mid])/2
     }
 
